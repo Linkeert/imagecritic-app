@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/f7187ce1e1.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>О ImageCritic</title>
+</head>
+<body>
+
+    <div class="animation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav">
+        <a href="/">Главная</a>
+        <a href="/first_page">Проверить избражения</a>
+        <a href="/second_page">Проверить видео-кадры</a>
+    </nav>
+
+    <div class="about-page-container">
+        <div class="info_container">
+            <h1 class="page_title">ImageCritic</h1>
+            <p class="page_description">Данное веб-приложение использует нейросетевые технологии для проверки качества в
+                коллекции изображений. Также имеется возможность проверить качество видео-кадров.</p>
+            <p class="opportunities"><strong>Проверить качество легко:</strong><br>все что нужно это <b>загрузить</b> изображения или видео,
+                <br>нажать кнопку, и дальше все <b>сделает нейросеть</b></p>
+            <p class="advantages"><strong>Преимущества:</strong> <br>Интуитивно <b>понятный интерфейс</b><br><b>Быстрая
+                    проверка</b>
+                изображений и
+                видео-кадров<br>Возможность <b>скачать избражения</b> после их проверки</p>
+        </div>
+        <div class="slider middle">
+            <div class="slides">
+
+                <input type="radio" name="r" id="r1" checked>
+                <input type="radio" name="r" id="r2">
+                <input type="radio" name="r" id="r3">
+                <input type="radio" name="r" id="r4">
+
+                <div class="slide s1"><img src="{{ url_for('static', filename='slider/1.png')}}" alt=""></div>
+                <div class="slide"><img src="{{ url_for('static', filename='slider/2.png')}}" alt=""></div>
+                <div class="slide"><img src="{{ url_for('static', filename='slider/3.png')}}" alt=""></div>
+                <div class="slide"><img src="{{ url_for('static', filename='slider/4.png')}}" alt=""></div>
+
+            </div>
+
+            <div class="navigation">
+                <label for="r1" class="bar"></label>
+                <label for="r2" class="bar"></label>
+                <label for="r3" class="bar"></label>
+                <label for="r4" class="bar"></label>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer links">
+        <a href="https://github.com/Linkeert"><i class="fa fa-github"></i></a>
+        <a href="https://t.me/Iinkeert"><i class="fa fa-telegram"></i></a>
+    </footer>
+</body>
+</html>

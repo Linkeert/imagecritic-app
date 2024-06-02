@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+    <title>Проверка качества изображений</title>
+</head>
+<body>
+
+    <div class="animation-second-page">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav">
+        <a href="/">Главная</a>
+        <a href="/second_page">Проверить видео-кадры</a>
+    </nav>
+
+    <h1 class="page-title">Проверка качества изображений</h1>
+
+    <div class="blocks_container">
+
+        <div class="left_block">
+            <input type="file" name="file" id="file" multiple style="display: none;">
+            <div id="dropzone" class="upload-image" tabindex="0" onclick="upload()" ondrop="drop(event)"
+                ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
+                <h2>Выберите или перенесите изображения ".jpg, .png, .jpeg"</h2>
+            </div>
+            <p id="images"></p>
+            <button type="submit" class="predict-btn" onclick="check()">Проверить изображения</button>
+            <p id="progress"></p>
+            <p id="result"></p>
+        </div>
+
+        <div class="center_block">
+            <div class="img_list_title">
+                <h2>Загруженные изображения:</h2>
+            </div>
+            <div class="img_list_container">
+                <div id="img_list" class="img_list"></div>
+            </div>
+        </div>
+
+        <div class="right_block">
+            <div class="quality_block_wrapper">
+                <div class="quality_img_title">
+                    <h2>Качественные</h2>
+                </div>
+                <div class="quality_img_container">
+                    <div id="quality_block"></div>
+                </div>
+                <button id="dwn_quality" class="dwn_quality"><i class="fa fa-download"></i>Скачать качественные</button>
+            </div>
+
+            <div class="noquality_block_wrapper">
+                <div class="noquality_img_title">
+                    <h2>Некачественные</h2>
+                </div>
+                <div class="noquality_img_container">
+                    <div id="noquality_block"></div>
+                </div>
+                <button id="dwn_noquality" class="dwn_noquality"><i
+                    class="fa fa-download"></i>Скачать некачественные</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

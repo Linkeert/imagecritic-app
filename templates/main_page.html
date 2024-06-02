@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/f7187ce1e1.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+    <title>Нейросеть ImageCritic</title>
+</head>
+<body>
+
+    <div class="animation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="info-container">
+        <div class="left-block">
+            <img src="{{ url_for('static', filename='img.png')}}" alt="" class="icon">
+        </div>
+        <div class="right-block">
+            <h1 class="title">Нейросеть <b>ImageCritic</b></h1>
+            <h2 class="subtitle">Проверь качество изображений с использованием нейросетевых технологий</h2>
+            <div class="buttons-block">
+                <a href="/first_page" class="check-images">ПРОВЕРИТЬ ИЗОБРАЖЕНИЯ</a>
+                <a href="/second_page" class="check-cadrs">ПРОВЕРИТЬ ВИДЕО-КАДРЫ</a>
+            </div>
+            <p class="description"><b>ImageCritic</b> - это веб-приложение, которое использует <b>искусственный
+                    интеллект</b>
+                для проверки <b>качества</b> в коллекции изображений.
+                Приложение может <b>автоматически</b> определять такие дефекты, как <b>размытие</b>, шум,
+                <b>засветы</b>, затемнения.
+            </p>
+            <a href="/about_page" class="btn-details">ПОДРОБНЕЕ О IMAGECRITIC</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <a href="https://github.com/Linkeert"><i class="fab fa-github"></i></a>
+        <a href="https://t.me/Iinkeert"><i class="fab fa-telegram"></i></a>
+    </footer>
+</body>
+</html>
